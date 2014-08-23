@@ -15,7 +15,6 @@
       timeFilterMode: 'server',
       simplifyFactor: 0,
       precision: 6,
-      inSR:4326
     },
 
     /**
@@ -81,8 +80,6 @@
       }
 
       this._buildQuery(bounds).run(function(error, featureCollection, response){
-        
-
         if(response && response.exceededTransferLimit){
           this.fire('drawlimitexceeded');
         }
